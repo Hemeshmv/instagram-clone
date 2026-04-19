@@ -22,7 +22,7 @@ body {
   color: white;
 }
 
-/* MAIN CARD */
+/* CONTAINER */
 .container {
   width: 100%;
   max-width: 420px;
@@ -32,10 +32,17 @@ body {
 
 /* PROFILE */
 .profile img {
-  width: 100px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   margin-bottom: 15px;
-  border: 3px solid #fff;
+  border: 3px solid transparent;
+  background: linear-gradient(45deg, #ff7a18, #ff0069, #d300c5);
+  padding: 3px;
+}
+
+.profile img {
+  object-fit: cover;
 }
 
 .profile h2 {
@@ -69,14 +76,14 @@ body {
   background: #1a1a1a;
 }
 
-/* ICON TEXT */
+/* LEFT SIDE */
 .left {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* COLORS */
+/* PLATFORM COLORS */
 .instagram { border-left: 4px solid #e1306c; }
 .whatsapp  { border-left: 4px solid #25D366; }
 .facebook  { border-left: 4px solid #1877f2; }
@@ -106,7 +113,7 @@ body {
 
   <!-- PROFILE -->
   <div class="profile">
-    <img src="https://i.pravatar.cc/150?img=3">
+    <img src="https://static.wikitide.net/deathbattlewiki/9/98/Portrait.tanjirokamado.png">
     <h2>Hemesh</h2>
     <p>Connect with me 👇</p>
   </div>
