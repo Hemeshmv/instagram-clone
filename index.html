@@ -21,13 +21,14 @@ body {
   min-height: 100vh;
 }
 
-/* PHONE FRAME */
+/* MAIN CONTAINER */
 .phone {
-  width: 360px;
+  width: 100%;
+  max-width: 420px;
   background: #fff;
   border-radius: 30px;
   padding: 20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.2);
 }
 
 /* PROFILE IMAGE */
@@ -37,18 +38,28 @@ body {
   margin-bottom: 15px;
 }
 
-/* NAME */
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .name {
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 5px;
+}
+
+/* VERIFIED ICON */
+.verify {
+  width: 18px;
 }
 
 /* BIO */
 .bio {
   font-size: 14px;
   color: #666;
-  margin-bottom: 15px;
+  margin: 10px 0 15px;
 }
 
 /* STATS */
@@ -62,7 +73,7 @@ body {
   font-weight: bold;
 }
 
-/* BUTTON */
+/* FOLLOW BUTTON */
 .follow-btn {
   width: 100%;
   padding: 12px;
@@ -70,26 +81,78 @@ body {
   border: none;
   background: #ddd;
   font-weight: bold;
-  cursor: pointer;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
-/* WORK GRID */
-.work {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+/* SECTION */
+.section-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* SOCIAL LINKS */
+.socials {
+  display: flex;
+  flex-direction: column;
   gap: 10px;
 }
 
-.work img {
-  width: 100%;
-  border-radius: 10px;
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border-radius: 12px;
+  background: #f3f3f3;
+  text-decoration: none;
+  color: #000;
+  transition: 0.3s;
 }
 
-/* MOBILE */
-@media(max-width:400px){
+.social:hover {
+  background: #e0e0e0;
+  transform: scale(1.02);
+}
+
+/* LEFT PART */
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* BRAND COLORS */
+.instagram { border-left: 5px solid #e1306c; }
+.whatsapp { border-left: 5px solid #25D366; }
+.facebook { border-left: 5px solid #1877f2; }
+.twitter { border-left: 5px solid #000; }
+.telegram { border-left: 5px solid #0088cc; }
+.discord { border-left: 5px solid #5865F2; }
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
+  body {
+    align-items: flex-start;
+    padding: 20px 10px;
+  }
+
   .phone {
-    width: 95%;
+    border-radius: 20px;
+    padding: 15px;
+  }
+
+  .name {
+    font-size: 18px;
+  }
+
+  .bio {
+    font-size: 13px;
   }
 }
 </style>
@@ -99,37 +162,84 @@ body {
 
 <div class="phone">
 
-  <!-- PROFILE IMAGE -->
+  <!-- PROFILE -->
   <img class="profile-img" src="https://static.wikitide.net/deathbattlewiki/9/98/Portrait.tanjirokamado.png">
 
-  <!-- NAME -->
-  <div class="name">Hemesh ✔</div>
+  <div class="header">
+    <div class="name">Hemesh</div>
+    <img class="verify" src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg">
+  </div>
 
-  <!-- BIO -->
   <div class="bio">
-    MCA Student | Tech Enthusiast <br>
-    Building cool web projects 🚀
+    MCA Student | Developer <br>
+    Connect with me 👇
   </div>
 
-  <!-- STATS -->
   <div class="stats">
-    <div><span>600</span> Followers</div>
-    <div><span>100</span> Posts</div>
+    <div><span>6</span> Platforms</div>
+    <div><span>Online</span></div>
   </div>
 
-  <!-- FOLLOW BUTTON -->
   <button class="follow-btn">+ Follow</button>
 
-  <!-- WORK -->
-  <h4 style="margin-bottom:10px;">My Work</h4>
+  <div class="section-title">My Socials</div>
 
-  <div class="work">
-    <img src="https://picsum.photos/200?1">
-    <img src="https://picsum.photos/200?2">
-    <img src="https://picsum.photos/200?3">
-    <img src="https://picsum.photos/200?4">
-    <img src="https://picsum.photos/200?5">
-    <img src="https://picsum.photos/200?6">
+  <div class="socials">
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/hemesh_mv?igsh=YWw4YjNiN2lhNDgy" target="_blank" class="social instagram">
+      <div class="left">
+        <img class="icon" src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+        Instagram
+      </div>
+      →
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/qr/5RYETIVWVWUDK1" target="_blank" class="social whatsapp">
+      <div class="left">
+        <img class="icon" src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+        WhatsApp
+      </div>
+      →
+    </a>
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/hemesh.hemesh.144734" target="_blank" class="social facebook">
+      <div class="left">
+        <img class="icon" src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+        Facebook
+      </div>
+      →
+    </a>
+
+    <!-- X -->
+    <a href="https://x.com/HemeshMv?s=20" target="_blank" class="social twitter">
+      <div class="left">
+        <img class="icon" src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png">
+        X
+      </div>
+      →
+    </a>
+
+    <!-- Telegram -->
+    <a href="https://t.me/contact/1776616375:o3hvNILqixbLPn4f" target="_blank" class="social telegram">
+      <div class="left">
+        <img class="icon" src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
+        Telegram
+      </div>
+      →
+    </a>
+
+    <!-- Discord -->
+    <div class="social discord">
+      <div class="left">
+        <img class="icon" src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png">
+        Discord
+      </div>
+      hemesh_mv_55855
+    </div>
+
   </div>
 
 </div>
