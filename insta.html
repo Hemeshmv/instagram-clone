@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Instagram</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+/* MAIN LAYOUT */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* LEFT SECTION */
+.left {
+  flex: 1;
+  background: radial-gradient(circle at 20% 20%, #0a0f1f, #000);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo {
+  width: 65px;
+  margin-bottom: 40px;
+}
+
+.left h1 {
+  font-size: 48px;
+  font-weight: 400;
+  color: #e4e6eb;
+  line-height: 1.3;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #ff7a18, #ff0069, #d300c5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* CARDS */
+.cards {
+  position: relative;
+  margin-top: 60px;
+  height: 320px;
+}
+
+.card {
+  position: absolute;
+  width: 210px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 22px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.7);
+}
+
+/* overlapping cards */
+.card1 {
+  left: 0;
+  top: 40px;
+  transform: rotate(-10deg);
+}
+
+.card2 {
+  left: 130px;
+  top: 0;
+  z-index: 2;
+}
+
+.card3 {
+  left: 260px;
+  top: 40px;
+  transform: rotate(10deg);
+}
+
+/* floating icons */
+.heart {
+  position: absolute;
+  left: -20px;
+  top: 200px;
+  font-size: 28px;
+}
+
+.star {
+  position: absolute;
+  right: 60px;
+  top: 120px;
+  font-size: 20px;
+  background: #22c55e;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+/* RIGHT SECTION */
+.right {
+  flex: 1;
+  background: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  width: 360px;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+/* INPUTS */
+.input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  background: #1e1e1e;
+  color: #fff;
+  outline: none;
+}
+
+.input::placeholder {
+  color: #aaa;
+}
+
+/* BUTTON */
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  background: #1877f2;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.forgot {
+  text-align: center;
+  margin: 15px 0;
+  color: #bbb;
+  font-size: 14px;
+}
+
+/* FACEBOOK BUTTON */
+.fb-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 25px;
+  border: 1px solid #444;
+  background: transparent;
+  color: #fff;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+/* SIGNUP */
+.signup-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 25px;
+  border: 1px solid #1877f2;
+  background: transparent;
+  color: #1877f2;
+  cursor: pointer;
+}
+
+.meta {
+  text-align: center;
+  margin-top: 20px;
+  color: #888;
+}
+
+/* FOOTER */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
+  color: #aaa;
+  border-top: 1px solid #222;
+}
+
+.footer span {
+  margin: 0 8px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- LEFT -->
+  <div class="left">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="logo">
+
+    <h1>
+      See everyday moments from <br>
+      your <span class="gradient-text">close friends.</span>
+    </h1>
+
+    <div class="cards">
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" class="card card1">
+      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" class="card card2">
+      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" class="card card3">
+
+      <div class="heart">❤️</div>
+      <div class="star">⭐</div>
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+    <div class="login-box">
+      <h2>Log into Instagram</h2>
+
+      <input class="input" type="text" placeholder="Mobile number, username or email">
+      <input class="input" type="password" placeholder="Password">
+
+      <button class="login-btn">Log in</button>
+
+      <div class="forgot">Forgot password?</div>
+
+      <button class="fb-btn">Log in with Facebook</button>
+
+      <button class="signup-btn">Create new account</button>
+
+      <div class="meta">Meta</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <span>Meta</span>
+  <span>About</span>
+  <span>Blog</span>
+  <span>Jobs</span>
+  <span>Help</span>
+  <span>API</span>
+  <span>Privacy</span>
+  <span>Terms</span>
+  <span>Locations</span>
+  <span>Instagram Lite</span>
+  <span>Meta AI</span>
+  <span>Threads</span>
+  <span>Meta Verified</span>
+  <br><br>
+  English © 2026 Instagram from Meta
+</div>
+
+</body>
+</html>
