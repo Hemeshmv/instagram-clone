@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Instagram</title>
+<title>Hemesh | Social Links</title>
 
 <style>
 * {
@@ -14,188 +14,89 @@
 }
 
 body {
-  background: #000;
-  color: #fff;
-}
-
-/* MAIN */
-.container {
-  display: flex;
-  min-height: 100vh;
-}
-
-/* LEFT */
-.left {
-  flex: 1;
-  background: radial-gradient(circle at 20% 20%, #0a0f1f, #000);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 60px;
-}
-
-.logo {
-  width: 60px;
-  margin-bottom: 30px;
-}
-
-.left h1 {
-  font-size: 42px;
-  line-height: 1.3;
-  font-weight: 400;
-}
-
-.gradient-text {
-  background: linear-gradient(90deg, #ff7a18, #ff0069, #d300c5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* CARDS */
-.cards {
-  position: relative;
-  margin-top: 50px;
-  height: 300px;
-}
-
-.card {
-  position: absolute;
-  width: 180px;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-}
-
-.card1 { left: 0; top: 40px; transform: rotate(-10deg); }
-.card2 { left: 100px; top: 0; z-index: 2; }
-.card3 { left: 200px; top: 40px; transform: rotate(10deg); }
-
-/* RIGHT */
-.right {
-  flex: 1;
-  background: #121212;
+  height: 100vh;
+  background: radial-gradient(circle at top, #0a0f1f, #000);
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
-.login-box {
+/* MAIN CARD */
+.container {
   width: 100%;
-  max-width: 360px;
-  padding: 20px;
+  max-width: 420px;
+  padding: 30px;
+  text-align: center;
 }
 
-.login-box h2 {
-  margin-bottom: 20px;
-}
-
-/* INPUT */
-.input {
-  width: 100%;
-  padding: 14px;
+/* PROFILE */
+.profile img {
+  width: 100px;
+  border-radius: 50%;
   margin-bottom: 15px;
-  border-radius: 10px;
-  border: 1px solid #333;
-  background: #1e1e1e;
-  color: #fff;
+  border: 3px solid #fff;
 }
 
-.login-btn {
-  width: 100%;
-  padding: 14px;
-  border-radius: 25px;
-  border: none;
-  background: #1877f2;
-  color: #fff;
-  cursor: pointer;
+.profile h2 {
+  font-weight: 500;
+  margin-bottom: 5px;
 }
 
-.forgot {
-  text-align: center;
-  margin: 15px 0;
+.profile p {
   color: #aaa;
+  font-size: 14px;
+  margin-bottom: 25px;
 }
 
-.fb-btn, .signup-btn {
-  width: 100%;
-  padding: 14px;
-  border-radius: 25px;
-  margin-bottom: 10px;
-  cursor: pointer;
+/* LINKS */
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #111;
+  padding: 14px 18px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+  border: 1px solid #222;
 }
 
-.fb-btn {
-  border: 1px solid #444;
-  background: transparent;
-  color: #fff;
+.link:hover {
+  transform: scale(1.05);
+  background: #1a1a1a;
 }
 
-.signup-btn {
-  border: 1px solid #1877f2;
-  color: #1877f2;
-  background: transparent;
+/* ICON TEXT */
+.left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.meta {
-  text-align: center;
-  margin-top: 15px;
-  color: #777;
-}
+/* COLORS */
+.instagram { border-left: 4px solid #e1306c; }
+.whatsapp  { border-left: 4px solid #25D366; }
+.facebook  { border-left: 4px solid #1877f2; }
+.twitter   { border-left: 4px solid #1DA1F2; }
+.telegram  { border-left: 4px solid #0088cc; }
+.discord   { border-left: 4px solid #5865F2; }
 
 /* FOOTER */
 .footer {
-  text-align: center;
-  padding: 15px;
+  margin-top: 20px;
   font-size: 12px;
-  color: #aaa;
-  border-top: 1px solid #222;
+  color: #777;
 }
 
-/* ===================== */
-/* 📱 MOBILE RESPONSIVE */
-/* ===================== */
-
-@media (max-width: 900px) {
-
+/* MOBILE */
+@media(max-width:500px){
   .container {
-    flex-direction: column;
-  }
-
-  /* Hide left section */
-  .left {
-    display: none;
-  }
-
-  .right {
-    flex: none;
-    height: 100vh;
-  }
-
-  .login-box {
-    max-width: 90%;
+    padding: 20px;
   }
 }
-
-/* ===================== */
-/* 📲 TABLET */
-/* ===================== */
-
-@media (max-width: 1200px) {
-
-  .left h1 {
-    font-size: 32px;
-  }
-
-  .card {
-    width: 140px;
-    height: 200px;
-  }
-
-  .card2 { left: 80px; }
-  .card3 { left: 160px; }
-}
-
 </style>
 </head>
 
@@ -203,45 +104,49 @@ body {
 
 <div class="container">
 
-  <!-- LEFT -->
-  <div class="left">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="logo">
-
-    <h1>
-      See everyday moments from <br>
-      your <span class="gradient-text">close friends.</span>
-    </h1>
-
-    <div class="cards">
-      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" class="card card1">
-      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" class="card card2">
-      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" class="card card3">
-    </div>
+  <!-- PROFILE -->
+  <div class="profile">
+    <img src="https://i.pravatar.cc/150?img=3">
+    <h2>Hemesh</h2>
+    <p>Connect with me 👇</p>
   </div>
 
-  <!-- RIGHT -->
-  <div class="right">
-    <div class="login-box">
-      <h2>Log into Instagram</h2>
+  <!-- LINKS -->
 
-      <input class="input" type="text" placeholder="Mobile number, username or email">
-      <input class="input" type="password" placeholder="Password">
+  <a href="https://www.instagram.com/hemesh_mv?igsh=YWw4YjNiN2lhNDgy" target="_blank" class="link instagram">
+    <div class="left">📸 Instagram</div>
+    <span>→</span>
+  </a>
 
-      <button class="login-btn">Log in</button>
+  <a href="https://wa.me/qr/5RYETIVWVWUDK1" target="_blank" class="link whatsapp">
+    <div class="left">💬 WhatsApp</div>
+    <span>→</span>
+  </a>
 
-      <div class="forgot">Forgot password?</div>
+  <a href="https://www.facebook.com/hemesh.hemesh.144734" target="_blank" class="link facebook">
+    <div class="left">📘 Facebook</div>
+    <span>→</span>
+  </a>
 
-      <button class="fb-btn">Log in with Facebook</button>
-      <button class="signup-btn">Create new account</button>
+  <a href="https://x.com/HemeshMv?s=20" target="_blank" class="link twitter">
+    <div class="left">🐦 X (Twitter)</div>
+    <span>→</span>
+  </a>
 
-      <div class="meta">Meta</div>
-    </div>
+  <a href="https://t.me/contact/1776616375:o3hvNILqixbLPn4f" target="_blank" class="link telegram">
+    <div class="left">📨 Telegram</div>
+    <span>→</span>
+  </a>
+
+  <div class="link discord">
+    <div class="left">🎮 Discord</div>
+    <span>hemesh_mv_55855</span>
   </div>
 
-</div>
+  <div class="footer">
+    © 2026 Hemesh | All Links
+  </div>
 
-<div class="footer">
-  English © 2026 Instagram from Meta
 </div>
 
 </body>
